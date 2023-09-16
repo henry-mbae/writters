@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expert Help</title>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- js bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- font-awesome link -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- external css -->
+  <link rel="stylesheet" href="footer.css">
+  <!-- boxicons css link-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- 1.   owl.carousel.min.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 2. owl.theme.default.min.css -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="test.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+    }
+
+    .size {
+      width: 33%;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar begins -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Wellis Writting</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mypage"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mypage">
+        <ul class="navbar-nav fw-bolder ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="experthelp.html">Expert Help</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="downloads.html">Downloads</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Create Account</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-danger" type="submit">
+            logout
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends -->
+  <!-- calculator begins -->
+  <div class="card shadow bg-primary p-5 mt-5 mb-5 " style="margin-left: 400px; margin-right: 400px;">
+    <form action="">
+      <h4 class="title text-white text-center">calculate my price</h4>
+      <label for="courses">Paper Type:</label>
+      <select name="courses" class="rounded" id="courses">
+        <option value="Diploma">Diploma</option>
+        <option value="Degree">Degree</option>
+        <option value="Masters">Masters</option>
+        <option value="Post Graduate">Post Graduate</option>
+
+      </select><br><br>
+      <label for="courses">Study Level:</label>
+      <select name="level" class="rounded" id="level">
+        <option value="academic">School</option>
+        <option value="">Bachelor</option>
+        <option value="">Masters</option>
+        <option value="">Phd</option>
+      </select>
+      <div class="row g-3 mt-2">
+        <div class="col-auto">
+          <label for="inputpages" class="col-form-label">Pages:</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" id="inputpages" class="form-control" aria-describedby="pagesHelpInline">
+        </div>
+      </div>
+      <div class="row g-3 mt-2">
+        <div class="col-auto">
+          <label for="inputdays" class="col-form-label">Days:</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" id="inputdays" class="form-control" aria-describedby="numberHelpInline">
+        </div>
+      </div>
+      <div class="col-auto">
+        <label for="inputpages" class="col-form-label">Writing instructions</label>
+      </div>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+          style="height: 200px"></textarea>
+        <label for="floatingTextarea2">Type your instructions here.Please provide as many details as possible.</label>
+      </div>
+      <a href="" class="btn btn-secondary mt-3">get price</a><span> <a href=""
+          class="btn btn-secondary mt-3">continue</a></span><br>
+      Price $:
+    </form>
+  </div>
+  <!-- calculator ends -->
+ <!-- client review section -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h3 class="text-center fw-bold">What's Client's Are Saying</h3>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="testimonial-item">
+                <img src="./images/write1.jpg" alt="">
+                <div class="qoute-icon">
+                  <i class="fa fa-quote-left"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse dolores excepturi fuga,
+                  labore molestias est veniam molestiae odio quasi necessitatibus neque animi atque, soluta sequi
+                  possimus quaerat architecto repudiandae!</p>
+
+                <span class="position">Chase</span><br>
+                <ul class="stars">
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-item">
+                <img src="./images/write2.jpg" alt="">
+                <div class="qoute-icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse dolores excepturi fuga,
+                  labore molestias est veniam molestiae odio quasi necessitatibus neque animi atque, soluta sequi
+                  possimus quaerat architecto repudiandae!</p>
+
+                <span class="position">Denique</span><br>
+                <ul class="stars">
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-item">
+                <img src="./images/write2.jpg" alt="">
+                <div class="qoute-icon">
+                  <i class="fa fa-quote-left"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse dolores excepturi fuga,
+                  labore molestias est veniam molestiae odio quasi necessitatibus neque animi atque, soluta sequi
+                  possimus quaerat architecto repudiandae!</p>
+
+                <span class="position">Rick</span><br>
+                <ul class="stars">
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-item">
+                <img src="./images/write1.jpg" alt="">
+                <div class="qoute-icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse dolores excepturi fuga,
+                  labore molestias est veniam molestiae odio quasi necessitatibus neque animi atque, soluta sequi
+                  possimus quaerat architecto repudiandae!</p>
+
+                <span class="position">Howard</span><br>
+                <ul class="stars">
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-item">
+                <img src="./images/write1.jpg" alt="">
+                <div class="qoute-icon">
+                  <i class="fa fa-quote-left"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse dolores excepturi fuga,
+                  labore molestias est veniam molestiae odio quasi necessitatibus neque animi atque, soluta sequi
+                  possimus quaerat architecto repudiandae!</p>
+
+                <span class="position">Mary</span><br>
+                <ul class="stars">
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimonial-item">
+                <img src="./images/write1.jpg" alt="">
+                <div class="qoute-icon">
+                  <i class="fa fa-quote-right"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse dolores excepturi fuga,
+                  labore molestias est veniam molestiae odio quasi necessitatibus neque animi atque, soluta sequi
+                  possimus quaerat architecto repudiandae!</p>
+
+                <span class="position">Clifford</span><br>
+                <ul class="stars">
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+                  <li><i class='bx bxs-star'></i></li>
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+   <!-- essay services begings -->
+   <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="section-title text-center mb-5">We deal with any Type of Academic Assignments</h2>
+        <ul class="flex box">
+          <li class="size">Essay</li>
+          <li class="size">Dissertation</li>
+          <li class="size">Thesis Writing</li>
+          <li class="size">Concept Papers</li>
+          <li class="size">Proposals</li>
+          <li class="size">Business Plans</li>
+          <li class="size">Academic Coaching</li>
+          <li class="size">Report writing</li>
+          <li class="size">Assessment writing</li>
+          <li class="size">Research paper</li>
+          <li class="size">Book/movie review</li>
+          <li class="size">Creative writing</li>
+          <li class="size">Case Study</li>
+          <li class="size">Article Review</li>
+          <li class="size">Coursework</li>
+          <li class="size">Presentations</li>
+          <li class="size">Speech</li>
+          <li class="size">Term paper</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!-- counter section -->
+    <div class="container-fluid p-3 mt-3 mb-3">
+      <h2 class="text-center"> We have assisted Thousands of Students</h2>
+      <div class="row gy-4 mt-3" data-aos="fade-up" style="background-color: linen;">
+        <div class="col-md-3">
+          <i class="icon-trophy h1"></i>
+          <h1 class="mt-3 mb-2">1200+</h1>
+          <p>satisfied cutomers</p>
+        </div>
+        <div class="col-md-3">
+          <i class="icon-camera h1"></i>
+          <h1 class="mt-3 mb-2">100</h1>
+          <p>professional Writers</p>
+        </div>
+        <div class="col-md-3">
+          <i class="icon-happy h1"></i>
+          <h1 class="mt-3 mb-2">15600+</h1>
+          <p>Completed Assignments</p>
+        </div>
+        <div class="col-md-3">
+          <i class="icon-paintbrush h1"></i>
+          <h1 class="mt-3 mb-2">50</h1>
+          <p>Topics covered</p>
+        </div>
+  
+      </div>
+    </div>
+<!-- footer begins -->
+  <footer>
+    <div class="container my-2">
+      <div class="row ">
+        <div class="footer-col">
+          <h4>Wellis Writting</h4>
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="experthelp.html">expert help</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="topics.html">topics</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>projects</h4>
+          <ul>
+            <li><a href="about.html">videos</a></li>
+            <li><a href="reviews.html">Testimonials</a></li>
+            <li><a href="reviews.html">Clients</a></li>
+          
+
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="legal.html">Copyright Policy</a></li>
+            <li><a href="legal.html">Academic Integrity</a></li>
+            <li><a href="legal.html">Terms Of Use</a></li>
+            <li><a href="legal.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>social media</h4>
+          <div class="social-links">
+
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div>
+      <div class="cola"></div>
+      <div class="cola">
+        <p class="text-center">Copyright &copy; 2023-willis writing.<span>All Rights Reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+   <!-- include jquery cdn files -->
+  <!--0. jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- owl.carousel.min.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- javasript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- initialization owl script -->
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      autoplay: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      mouseDrag: false,
+      slideBy: 2,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 2
+        }
+      }
+
+    })
+  </script>
+</body>
+
+</html>
